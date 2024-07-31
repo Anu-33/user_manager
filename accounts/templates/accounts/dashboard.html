@@ -1,0 +1,16 @@
+<h2>Dashboard</h2>
+<p>First Name: {{ profile.first_name }}</p>
+<p>Last Name: {{ profile.last_name }}</p>
+<p>Username: {{ profile.user.username }}</p>
+<p>Email: {{ profile.user.email }}</p>
+<p>
+  Address: {{ profile.address_line1 }}, {{ profile.city }}, {{ profile.state }},
+  {{ profile.pincode }}
+</p>
+
+{% if profile_picture_url %}
+<p>Profile Picture:</p>
+<img src="{{ profile_picture_url }}" alt="Profile Picture" />
+{% else %}
+<p>No Profile Picture uploaded.</p>
+{% endif %}
